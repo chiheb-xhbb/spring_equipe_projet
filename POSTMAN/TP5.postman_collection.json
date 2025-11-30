@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "7c19c2b0-ab1f-461d-925d-3d423269f706",
+		"name": "TP5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46666399",
+		"_collection_link": "https://chihebddineselmi.postman.co/workspace/Chihebddine-Selmi's-Workspace~3685408d-5102-4fce-82c4-90c8a2f56f04/collection/46666399-7c19c2b0-ab1f-461d-925d-3d423269f706?action=share&source=collection_link&creator=46666399"
+	},
+	"item": [
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "DetailProjet",
+					"item": [
+						{
+							"name": "get all DetailsProjets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/tp5/projet-detail/get-all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"tp5",
+										"projet-detail",
+										"get-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get ProjetDetail by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/tp5/projet-detail/get/{detail-id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"tp5",
+										"projet-detail",
+										"get",
+										"{detail-id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add DetailProjet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"description\": \"Deep Learning model training\",\r\n  \"technologie\": \"TensorFlow\",\r\n  \"cout\": 5000,\r\n  \"dateDebut\": \"2025-12-01\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/tp5/projet-detail/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"tp5",
+										"projet-detail",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update DetailProjet",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": 1,\r\n  \"description\": \"Deep Learning Model Updated\",\r\n  \"technologie\": \"PyTorch\",\r\n  \"cout\": 6500,\r\n  \"dateDebut\": \"2025-12-15\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/tp5/projet-detail/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"tp5",
+										"projet-detail",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteDetailProjet",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/tp5/projet-detail/delete/{detail-id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"tp5",
+										"projet-detail",
+										"delete",
+										"{detail-id}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "add projet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sujet\": \"Projet Simulation Physique\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/get-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET project BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"sujet\": \"Projet Machine Learning Updated\",\r\n  \"projetDetail\": null,\r\n  \"equipe\": null\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/delete/{projet-id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"delete",
+								"{projet-id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "affectation detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"description\": \"Deep Learning Model\",\r\n  \"technologie\": \"TensorFlow\",\r\n  \"cout\": 5000,\r\n  \"dateDebut\": \"2025-12-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/assign-detail/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"assign-detail",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "desaffectation detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/remove-detail/{projet-id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"remove-detail",
+								"{projet-id}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "add equipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Equipe Sécurité\",\r\n  \"domaine\": \"NIDS\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all equipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/get-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get equipe by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/get/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"get",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update equipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"nom\": \"Equipe ERP Updated\",\r\n  \"domaine\": \"ERPBI\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete equipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "affectation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/assign-projet/2/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"assign-projet",
+						"2",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "desaffectation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/tp5/equipe/remove-projet/2/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"tp5",
+						"equipe",
+						"remove-projet",
+						"2",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
