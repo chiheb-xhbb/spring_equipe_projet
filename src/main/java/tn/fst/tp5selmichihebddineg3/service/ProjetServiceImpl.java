@@ -96,4 +96,38 @@ public class ProjetServiceImpl implements IProjetService {
             projetRepository.save(projet);  // Save update
         }
     }
+    @Override
+    public Projet addProjetAndProjetDetailAndAssign(Projet projet) {
+
+        // Extract projetDetail from JSON body
+        ProjetDetail detail = projet.getProjetDetail();
+
+        if (detail != null) {
+            // save detail first
+            ProjetDetail savedDetail = projetDetailRepository.save(detail);
+
+            // link projet -> detail
+            projet.setProjetDetail(savedDetail);
+
+            // link detail -> projet (inverse side)
+            savedDetail.setProjet(projet);
+        }
+
+        // save projet (owning side)
+        return projetRepository.save(projet);
+    }
+    @Override
+    public Projet addProjetAndAssignExistingProjetDetail(Long idProjetDetail, Projet projet) {
+
+        ProjetDetail detail = projetDetailRepository.findById(idProjetDetail)
+                .orElseThrow(() -> new RuntimeException("ProjetDetail not found"));
+
+        // Link both sides
+        projet.setProjetDetail(detail);
+        detail.setProjet(projet);
+
+        return projetRepository.save(projet);
+    }
+
+
 }

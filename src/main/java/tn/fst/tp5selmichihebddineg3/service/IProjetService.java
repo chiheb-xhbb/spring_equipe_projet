@@ -23,4 +23,10 @@ public interface IProjetService {
 
     // Désaffectation Projet ← Equipe
     void removeProjetFromEquipe(Long idProjet);
+
+    Projet addProjetAndProjetDetailAndAssign(Projet projet);
+
+    Projet addProjetAndAssignExistingProjetDetail(Long idProjetDetail, Projet projet);
+
+
 }

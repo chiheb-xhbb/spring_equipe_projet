@@ -89,4 +89,20 @@ public class ProjetRestController {
     public void removeProjetFromEquipe(@PathVariable("projet-id") Long idProjet) {
         projetService.removeProjetFromEquipe(idProjet);
     }
+
+    @PostMapping("/ajouter-projet-et-projet-detail")
+    public Projet addProjetAndProjetDetail(@RequestBody Projet p) {
+        return projetService.addProjetAndProjetDetailAndAssign(p);
+    }
+    // ----------- CAS 4 : Ajouter Projet + Affecter ProjetDetail EXISTANT -----------
+    // http://localhost:8089/tp5/projet/affecter-projet-detail/{detail-id}
+    @PostMapping("/affecter-projet-detail/{detail-id}")
+    public Projet addProjetAndAssignExistingProjetDetail(
+            @PathVariable("detail-id") Long idDetail,
+            @RequestBody Projet projet) {
+
+        return projetService.addProjetAndAssignExistingProjetDetail(idDetail, projet);
+    }
+
+
 }

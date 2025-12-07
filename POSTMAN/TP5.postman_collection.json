@@ -266,39 +266,7 @@
 					"response": []
 				},
 				{
-					"name": "affectation detail",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"id\": 1,\r\n  \"description\": \"Deep Learning Model\",\r\n  \"technologie\": \"TensorFlow\",\r\n  \"cout\": 5000,\r\n  \"dateDebut\": \"2025-12-01\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8089/tp5/projet/assign-detail/1/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8089",
-							"path": [
-								"tp5",
-								"projet",
-								"assign-detail",
-								"1",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "desaffectation detail",
+					"name": "cas 5 :desaffectation detail",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -314,6 +282,90 @@
 								"projet",
 								"remove-detail",
 								"{projet-id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cas 1:add project and detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sujet\": \"Validation sujet\",\r\n  \"projetDetail\": {\r\n    \"description\": \"TESTTTT\",\r\n    \"technologie\": \"TEEEEESSST\",\r\n    \"cout\": 9000,\r\n    \"dateDebut\": \"2025-02-15\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/ajouter-projet-et-projet-detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"ajouter-projet-et-projet-detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cas 2 : affectation projet detail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/assign-detail/{detail-id}/{projet-id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"assign-detail",
+								"{detail-id}",
+								"{projet-id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cas 4 : affecter projet detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/tp5/projet/affecter-projet-detail/{detail-id}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"tp5",
+								"projet",
+								"affecter-projet-detail",
+								"{detail-id}"
 							]
 						}
 					},
@@ -447,7 +499,7 @@
 			"response": []
 		},
 		{
-			"name": "affectation",
+			"name": "cas 3 : affectation PROJET → EQUIPE",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -470,7 +522,7 @@
 			"response": []
 		},
 		{
-			"name": "desaffectation",
+			"name": "cas 6 : desaffectation projet d'une equipe",
 			"request": {
 				"method": "PUT",
 				"header": [],
